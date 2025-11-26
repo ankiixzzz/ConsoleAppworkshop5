@@ -23,29 +23,52 @@
 //        }
 //    }
 //}
+//namespace DotnetWorkshop
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            // Create Car object
+//            Car car = new Car("Toyota", 180, 5);
+
+//            Console.WriteLine("=== Car Info ===");
+//            car.Start();
+//            car.DisplayInfo();
+//            car.Stop();
+
+//            Console.WriteLine();
+
+//            // Create Motorcycle object
+//            Motorcycle bike = new Motorcycle("Yamaha", 150, true);
+
+//            Console.WriteLine("=== Motorcycle Info ===");
+//            bike.Start();
+//            bike.DisplayInfo();
+//            bike.Stop();
+
+//            Console.ReadLine();
+//        }
+//    }
+//}
+using System;
+
 namespace DotnetWorkshop
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Create Car object
-            Car car = new Car("Toyota", 180, 5);
+            Printer printer = new Printer();
 
-            Console.WriteLine("=== Car Info ===");
-            car.Start();
-            car.DisplayInfo();
-            car.Stop();
+            // Call overload 1
+            printer.Print("Hello, Ankita!");
 
-            Console.WriteLine();
+            // Call overload 2
+            printer.Print(123);
 
-            // Create Motorcycle object
-            Motorcycle bike = new Motorcycle("Yamaha", 150, true);
-
-            Console.WriteLine("=== Motorcycle Info ===");
-            bike.Start();
-            bike.DisplayInfo();
-            bike.Stop();
+            // Call overload 3
+            printer.Print("Repeated message", 3);
 
             Console.ReadLine();
         }
