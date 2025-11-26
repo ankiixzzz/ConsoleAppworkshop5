@@ -75,8 +75,36 @@ using System;
 //        }
 //    }
 //}
-using System;
+//using System;
 
+//using System;
+
+//namespace DotnetWorkshop
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            // Car object
+//            Car car = new Car();
+//            Console.WriteLine("=== Car ===");
+//            car.Display();
+//            car.StartEngine();
+//            car.StopEngine();
+
+//            Console.WriteLine();
+
+//            // Motorcycle object
+//            Motorcycle bike = new Motorcycle();
+//            Console.WriteLine("=== Motorcycle ===");
+//            bike.Display();
+//            bike.StartEngine();
+//            bike.StopEngine();
+
+//            Console.ReadLine();
+//        }
+//    }
+//}
 using System;
 
 namespace DotnetWorkshop
@@ -85,23 +113,22 @@ namespace DotnetWorkshop
     {
         static void Main(string[] args)
         {
-            // Car object
-            Car car = new Car();
-            Console.WriteLine("=== Car ===");
-            car.Display();
-            car.StartEngine();
-            car.StopEngine();
+            // Create store
+            ElectronicsStore store = new ElectronicsStore();
 
-            Console.WriteLine();
+            // Create devices
+            Laptop laptop1 = new Laptop("Dell", 1200, 16);
+            Smartphone phone1 = new Smartphone("Samsung", 800, "Android");
 
-            // Motorcycle object
-            Motorcycle bike = new Motorcycle();
-            Console.WriteLine("=== Motorcycle ===");
-            bike.Display();
-            bike.StartEngine();
-            bike.StopEngine();
+            // Add devices to store
+            store.AddDevice(laptop1);
+            store.AddDevice(phone1);
+
+            // Show all devices
+            store.ShowAllDeviceDetails();
 
             Console.ReadLine();
         }
     }
 }
+
