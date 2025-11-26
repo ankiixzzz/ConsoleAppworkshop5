@@ -1,18 +1,19 @@
-﻿namespace DotnetWorkshop
+﻿using System;
+
+namespace DotnetWorkshop
 {
+    // Only one Motorcycle class for abstract Vehicle
     public class Motorcycle : Vehicle
     {
-        public bool HasCarrier { get; set; }
-
-        public Motorcycle(string brand, int speed, bool hasCarrier) : base(brand, speed)
+        // Implement abstract methods
+        public override void StartEngine()
         {
-            HasCarrier = hasCarrier;
+            Console.WriteLine("Motorcycle engine started.");
         }
 
-        public override void DisplayInfo()
+        public override void StopEngine()
         {
-            base.DisplayInfo();
-            Console.WriteLine($"Has Carrier: {HasCarrier}");
+            Console.WriteLine("Motorcycle engine stopped.");
         }
     }
 }

@@ -1,29 +1,44 @@
-﻿namespace DotnetWorkshop
+﻿//namespace DotnetWorkshop
+//{
+//    public class Vehicle
+//    {
+//        public string Brand { get; set; }
+//        public int Speed { get; set; }
+
+//        public Vehicle(string brand, int speed)
+//        {
+//            Brand = brand;
+//            Speed = speed;
+//        }
+
+//        public void Start()
+//        {
+//            Console.WriteLine($"{Brand} is starting...");
+//        }
+
+//        public void Stop()
+//        {
+//            Console.WriteLine($"{Brand} has stopped.");
+//        }
+
+//        public virtual void DisplayInfo()
+//        {
+//            Console.WriteLine($"Brand: {Brand}, Speed: {Speed} km/h");
+//        }
+//    }
+//}
+namespace DotnetWorkshop
 {
-    public class Vehicle
+    public abstract class Vehicle
     {
-        public string Brand { get; set; }
-        public int Speed { get; set; }
+        // Abstract methods
+        public abstract void StartEngine();
+        public abstract void StopEngine();
 
-        public Vehicle(string brand, int speed)
+        // Concrete method
+        public void Display()
         {
-            Brand = brand;
-            Speed = speed;
-        }
-
-        public void Start()
-        {
-            Console.WriteLine($"{Brand} is starting...");
-        }
-
-        public void Stop()
-        {
-            Console.WriteLine($"{Brand} has stopped.");
-        }
-
-        public virtual void DisplayInfo()
-        {
-            Console.WriteLine($"Brand: {Brand}, Speed: {Speed} km/h");
+            Console.WriteLine("This is a vehicle");
         }
     }
 }

@@ -54,6 +54,7 @@
 using System;
 
 //namespace DotnetWorkshop
+
 //{
 //    class Program
 //    {
@@ -76,25 +77,29 @@ using System;
 //}
 using System;
 
+using System;
+
 namespace DotnetWorkshop
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Nepali Teacher (Overrides method)
-            NepaliTeacher nepaliTeacher = new NepaliTeacher("Ram");
-            Console.WriteLine("=== Nepali Teacher ===");
-            nepaliTeacher.Teaching();
-            nepaliTeacher.SalaryInfo();
+            // Car object
+            Car car = new Car();
+            Console.WriteLine("=== Car ===");
+            car.Display();
+            car.StartEngine();
+            car.StopEngine();
 
             Console.WriteLine();
 
-            // English Teacher (Uses base class method)
-            EnglishTeacher englishTeacher = new EnglishTeacher("Sita");
-            Console.WriteLine("=== English Teacher ===");
-            englishTeacher.Teaching();
-            englishTeacher.SalaryInfo();
+            // Motorcycle object
+            Motorcycle bike = new Motorcycle();
+            Console.WriteLine("=== Motorcycle ===");
+            bike.Display();
+            bike.StartEngine();
+            bike.StopEngine();
 
             Console.ReadLine();
         }
