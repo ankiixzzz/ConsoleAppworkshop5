@@ -53,22 +53,48 @@
 //}
 using System;
 
+//namespace DotnetWorkshop
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            Printer printer = new Printer();
+
+//            // Call overload 1
+//            printer.Print("Hello, Ankita!");
+
+//            // Call overload 2
+//            printer.Print(123);
+
+//            // Call overload 3
+//            printer.Print("Repeated message", 3);
+
+//            Console.ReadLine();
+//        }
+//    }
+//}
+using System;
+
 namespace DotnetWorkshop
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Printer printer = new Printer();
+            // Nepali Teacher (Overrides method)
+            NepaliTeacher nepaliTeacher = new NepaliTeacher("Ram");
+            Console.WriteLine("=== Nepali Teacher ===");
+            nepaliTeacher.Teaching();
+            nepaliTeacher.SalaryInfo();
 
-            // Call overload 1
-            printer.Print("Hello, Ankita!");
+            Console.WriteLine();
 
-            // Call overload 2
-            printer.Print(123);
-
-            // Call overload 3
-            printer.Print("Repeated message", 3);
+            // English Teacher (Uses base class method)
+            EnglishTeacher englishTeacher = new EnglishTeacher("Sita");
+            Console.WriteLine("=== English Teacher ===");
+            englishTeacher.Teaching();
+            englishTeacher.SalaryInfo();
 
             Console.ReadLine();
         }
